@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: #DAFFFB;
+            margin: 0;
+        }
+        h1 {
+            font-size: 48px;
+            text-align: center;
+        }
+        button {
+            background-color: #176B87;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 32px;
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #001C30;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="output"></h1>
+        <button onclick="window.location.href='main.html'">Shorten another URL!</button>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const text = urlParams.get('text');
+        document.getElementById('output').innerText = text;
+    </script>
+</body>
+</html>
