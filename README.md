@@ -1,4 +1,4 @@
-# ACM_URL_SHORTENER
+# URL Shortener 
 Following features have been added
 1) Frontend (index.ejs): index.ejs is an HTML file that serves as the homepage for a web application. It includes a Bootstrap stylesheet and custom CSS styles. The page has a header with a title and a navigation bar. The main content of the page is a centered heading with a gradient background and transparent text. Below the heading, there is a form for submitting a URL to be shortened. The form includes an input field and a submit button. The page also includes a script tag that loads a JavaScript file for handling form submission. Overall, index.ejs provides a simple and visually appealing interface for users to submit URLs to be shortened.
 
