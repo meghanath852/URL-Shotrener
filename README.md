@@ -7,4 +7,8 @@ Following features have been added
 3) Mandatory tasks done: Shotrening and searching
    Optional tasks done: UI and Hosting (using Render)
 
-4) Hosted at: https://url-shortener-k64f.onrender.com/shortUrls
+4) Hosted at: https://url-shortener-k64f.onrender.com/
+
+5) INSTALLATION: 1.if you want to run project locally on computer , change the code in server.js filemongoose.connect('####')
+
+Change the url in above code. And type code “npm run devStart” in terminal. Install "dependencies": { "ejs": "^3.1.9", "express": "^4.18.2", "mongodb": "^5.6.0", "mongoose": "^7.3.0", "shortid": "^2.2.16" }, "devDependencies": { "nodemon": "^2.0.22" }
