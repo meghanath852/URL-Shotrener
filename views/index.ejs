@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    .my-class {
+  font-size: 50px;
+  font-weight: 1000;
+  text-align: center;
+  margin-bottom: 50px;
+  background-image: linear-gradient(to right, #553c9a, #b393d3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+h1 {
+  font-size: 50px;
+  font-weight: 1000;
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 0.8;
+  transition: opacity 0.5s ease-in-out;
+}
+input[type="text"], input[type="password"], input[type="email"], button {
+  border-radius: 20px;
+}
+
+
+
+h1:hover {
+  opacity: 1;
+}
+h1 {
+  font-size: 50px;
+  font-weight: 1000;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #001C30;
+  font-family: "Helvetica";
+  transition: font-size 0.5s ease-in-out;
+}
+
+h1:hover {
+  font-size: 60px;
+  color: #176B87;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: font-size 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+    body {
+      background-color: #DAFFFB;
+    }
+
+    .container {
+     
+      margin: 50px auto;
+      width: 90%;
+      padding: 20px;
+      background-color: #64CCC5;
+      box-shadow: 100 2px 6px rgba(18, 3, 16, 0.1);
+      border-radius: 20px;
+    }
+
+    h1 {
+  font-size: 50px;
+  font-weight: 1000;
+  text-align: center;
+  margin-bottom: 50px;
+  background: linear-gradient(to right, #001C30, #176B87, #001C30);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+    .form-inline {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+
+    .form-control {
+      width: 70%;
+    }
+    
+    .btn {
+      width: 10%;
+    }
+
+    .table {
+
+      margin-bottom: 50px;
+    }
+    .form-control {
+  height: 80px;
+}
+
+    .submit-button {
+  
+  color: white;
+  width: 20%;
+  
+  border: none;
+  margin-left: 10;
+}
+
+.input-box {
+  width: 70%;
+  height: 80px;
+  margin-top: 10px;
+}
+
+.submit-button {
+  width: 40%;
+  height: 40px;
+  margin-top: 10px;
+  background-color: #176B87;
+  color: white;
+  position: relative;
+  transition: transform 0.5s;
+  transform: translateX(0);
+  border-radius: 20px;
+}
+label[for="fullUrl"] {
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.form-control {
+  border-radius: 20px;
+}
+
+
+.submit-button:hover {
+  animation: shake 0.5s; /* modify the duration of the shake animation to 1 second */
+  animation-iteration-count: 1; /* modify the iteration count to 1 */
+  animation-timing-function: cubic-bezier(0.36, 0.07, 0.19, 0.97);
+  transform: translateX(-10px); /* modify the transform property to only be horizontal */
+  background-color: #001C30;
+}
+
+
+@keyframes shake {
+  0% {
+    transform: translateX(0); /* modify the transform property to only be horizontal */
+  }
+  20% {
+    transform: translateX(-10px); /* modify the transform property to only be horizontal */
+  }
+  40% {
+    transform: translateX(10px); /* modify the transform property to only be horizontal */
+  }
+  60% {
+    transform: translateX(-10px); /* modify the transform property to only be horizontal */
+  }
+  80% {
+    transform: translateX(10px); /* modify the transform property to only be horizontal */
+  }
+  100% {
+    transform: translateX(0); /* modify the transform property to only be horizontal */
+  }
+}
+
+
+</style>
+<title>URL Shortener</title>
+<link rel="icon" type="image/x-icon" href="C:\Users\megha\Downloads\download.ico">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="my-class">URL Shortener</h1>
+    <form action="/" method="GET" class="form-inline">
+        <div class="d-flex flex-column" style="width: 100%;">
+          <hr class="w-100"> <!-- Add this line to create a horizontal line -->
+          <input type="text" name="q" placeholder="Lookup Previous URLs" class="form-control mr-2 input-box">
+          <div class="text-center">
+            <button class="btn btn-primary submit-button mx-auto" type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+      <form action="/shortUrls" method="POST" class="form-inline">
+        <div class="d-flex flex-column" style="width: 100%">
+          <label for="fullUrl" class="sr-only">URL</label>
+          <input required placeholder="Enter URL to shorter" type="url" name="fullUrl" id="fullUrl" class="form-control mb-2">
+          
+          <input type="text" name="note" class="form-control mb-2" placeholder="(OPTIONAL) Add a note">
+          <div class="text-center">
+          <button class="btn btn-success submit-button" type="submit">Shorten</button>
+          
+        </div>
+      </form>
+
+    <% if (errorMessage) { %> <!-- Update variable name to errorMessage -->
+      <div class="alert alert-danger text-center">
+        <%= errorMessage %> <!-- Update variable name to errorMessage -->
+      </div>
+    <% } %>
+    
+
+    <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th class="col-2">Full URL</th>
+          <th class="col-2">Short URL</th>
+          <th class="col-2">Clicks</th>
+          <th class="col-2">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+  <% shortUrls.forEach(shortUrl => { %>
+  <tr>
+    <td class="col-2"><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+    <td class="col-2"><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+    <td class="col-2"><%= shortUrl.clicks %></td>
+    <td class="col-2"><%= shortUrl.note %></td>     
+    </td>
+  </tr>
+  <% }) %>
+</tbody>
+
+    </table>
+    </div>
+  </div>
+</body>
+
+</html>
