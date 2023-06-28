@@ -6,3 +6,5 @@ Following features have been added
 
 3) Mandatory tasks done: Shotrening and searching
    Optional tasks done: UI and Hosting (using Render)
+
+4) Hosted at: https://url-shortener-k64f.onrender.com/shortUrls
